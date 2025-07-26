@@ -7,6 +7,11 @@ pipeline {
                 sh 'python --version'
             }
         }
+        stage('stage2') {
+            steps {
+                sh 'ping -c 4 8.8.8.8'
+            }
+        }
     }
 }
 
